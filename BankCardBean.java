@@ -1,6 +1,3 @@
-package com.yeepay.g3.bc.common.util.bankCard;
-
-import com.yeepay.g3.bc.common.enumtype.CardTypeEnum;
 
 public class BankCardBean {
 	

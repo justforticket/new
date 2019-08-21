@@ -73,9 +73,7 @@ public class VirCardNoUtils {
         //获取持卡人姓名
         String holderName = getName();
         bankCard.setHolderName(holderName);
-        //获取持卡人手机号
-        String phoneNumber = getTel();
-        bankCard.setPhoneNumber(phoneNumber);
+        
         //获取身份证号码
         String idCardNo = getRandomID();
         bankCard.setHolderIdCardNo(idCardNo);
@@ -169,19 +167,7 @@ public class VirCardNoUtils {
         return name;
     }
 
-    /**
-     * 获取手机号
-     * @return
-     */
-    public static String getTel() {
-        String[] telFirst = "134,135,136,137,138,139,150,151,152,157,158,159,130,131,132,155,156,133,153".split(",");
-        int index = getNum(0, telFirst.length - 1);
-        String first = telFirst[index];
-        String second = String.valueOf(getNum(1, 888) + 10000).substring(1);
-        String third = String.valueOf(getNum(1, 9100) + 10000).substring(1);
-        return first + second + third;
-    }
-
+ 
     public static int getNum(int start, int end) {
         return (int) (Math.random() * (end - start + 1) + start);
     }
